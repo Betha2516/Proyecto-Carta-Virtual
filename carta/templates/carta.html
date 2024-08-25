@@ -1,0 +1,76 @@
+{% extends "base.html" %} 
+{% block title %} Carta {% endblock%} 
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4 text-center mb-4 font-weight-bold" style="color: #003366;">Nuestra Carta</h1>
+    
+    <h2 class=" p-2 text-center mb-3" style="border-radius: 10px; background-color: #FFDB58; color: #A0522D;" >Entradas</h2>
+    <div class="row flex-row g-3">
+        {% for entrada in entradas %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+                <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <img src="{{entrada.img}}" class="card-img-top img-fluid w-100" alt="{{entrada.name}}" style="object-fit: cover; height: 100%;" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{entrada.name}}</h5>
+                    <p class="card-text">{{entrada.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h2 class="p-2 text-center mt-3 mb-3" style="border-radius: 10px; background-color: #FFDB58; color: #A0522D;">Platos Fuertes</h2>
+    <div class="row flex-row g-3">
+        {% for plato in platosf %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+                <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <img src="{{plato.img}}" class="card-img-top img-fluid w-100" alt="{{plato.name}}" style="object-fit: cover; height: 100%;" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{plato.name}}</h5>
+                    <p class="card-text">{{plato.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h2 class="p-2 text-center mt-3 mb-3" style="border-radius: 10px; background-color: #FFDB58; color: #A0522D;">Bebidas</h2>
+    <div class="row flex-row g-3">
+        {% for bebida in bebidas %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+                <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <img src="{{bebida.img}}" class="card-img-top img-fluid w-100" alt="{{bebida.name}}" style="object-fit: cover; height: 100%;" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{bebida.name}}</h5>
+                    <p class="card-text">{{bebida.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h2 class="p-2 text-center mt-3 mb-3" style="border-radius: 10px; background-color: #FFDB58; color: #A0522D;">Postres</h2>
+    <div class="row flex-row g-3">
+        {% for postre in postres %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+                <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <img src="{{postre.img}}" class="card-img-top img-fluid w-100" alt="{{postre.name}}" style="object-fit: cover; height: 100%;" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{postre.name}}</h5>
+                    <p class="card-text">{{postre.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

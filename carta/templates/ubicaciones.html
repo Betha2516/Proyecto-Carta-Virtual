@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Ubicaciones
+{% endblock%}
+
+{%block content%}
+<h1 class="display-4 text-center mb-4 font-weight-bold" style="color: #003366;">Ubicaciones</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="p-1 mb-1 bg-light border">
+                <div id="map" style="height: 400px; width: 535px;"></div>
+            </div>
+        </div>
+    </div>
+    <h2 class=" p-2 text-center mb-3 font-weight-bold" >Sedes</h2>
+    <div class="row flex-row g-3">
+        {% for ubicacion in ubicaciones %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+                <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <img src="{{ ubicacion.img}}" class="card-img-top img-fluid w-100" alt="{{ ubicacion.name}}" style="object-fit: cover; height: 100%;" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ubicacion.name}}</h5>
+                    <p class="card-text">{{ubicacion.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="row justify-content-center mb-2  mt-4">
+        <div class="col-auto">
+            <a href="{% url 'registro' %}" class="btn btn-primary btn-lg" style="background-color: #003366; border-color: #003366;">
+                Reservar Ahora
+            </a>
+        </div>
+    </div>
+</div>
+{%endblock%}
+
+{% block scripts %}
+<script>
+    var map = L.map('map').setView([6.243002243403531, -75.58940551518481], 13  );
+    
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var marker = L.marker([6.245239348203064, -75.59477261284171]).addTo(map);
+    var marker = L.marker([6.25064298961053, -75.62151261981653]).addTo(map);
+    var marker = L.marker([6.208152357829161, -75.56797340501274]).addTo(map);
+</script>
+{% endblock%}

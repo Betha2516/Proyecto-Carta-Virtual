@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock%}
+{% block content %}
+<div class="container text-center">
+    <h1 class="display-4 text-center mb-4 font-weight-bold mt-3" style="color: #003366;">Sabores del Mundo</h1>
+</div>
+
+<div id="carouselExampleCaptions" class="carousel slide" >
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://s1.1zoom.me/big0/558/Hamburger_Fast_food_Buns_Closeup_595677_1280x720.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Platos Exquisitos</h5>
+          <p>Sabores de todo el mundo.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.semana.com/resizer/v2/ZPI3JULK4BBBZJT7VFLLSURBXA.jpg?auth=410987690f53cd891f320f333ec38516dadb979985a4a26ea699d9ce60e089c2&smart=true&quality=75&width=1280&height=720" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Restaurante con estilo rooftop</h5>
+          <p>Elegante, confortable, comodo y retro</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.semana.com/resizer/v2/GJPJCPNCMFBNVG42VXVTROKM3U.jpg?auth=e0c4ee31f3aff02e5d740b808fbf95e07a452a222efb29e8ea1866f3a06f7fbe&smart=true&quality=75&width=1280&height=720" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Ambiente agradable </h5>
+          <p>Excelente servicio, amabilidad y tranquilidad</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container text-center">
+    <h2 class="display-4 text-center mb-4 font-weight-bold mt-4"  style="color: #003366;" >Nosotros Somos</h2>
+  
+
+  <div class="card-group ">
+    <div class="card bg-transparent border-dark" >
+      <img src="https://media.istockphoto.com/id/1162911786/es/foto/el-equipo-de-cocineros-respalda-el-trabajo-en-la-cocina-moderna-el-flujo-de-trabajo-del.jpg?s=612x612&w=0&k=20&c=5LIXbB7nEjp_adoalKupOwrverxnEPEX8HQ_9R2gi24=" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-dark">Cocina de Calidad</h5>
+        <p class="card-text text-dark">Chefs internacionales con especializacion en comidas tipas de cada region</p>
+      </div>
+    </div>
+    <div class="card bg-transparent border-dark">
+      <img src="https://media.istockphoto.com/id/1094919124/es/foto/hombre-gerente-y-tambi%C3%A9n-chef-mujer-con-tableta-digital-en-cocina.jpg?s=612x612&w=0&k=20&c=tiNunwXlayZNg5HWT44EdIuDJ2i8WeM3bstyLv2Kup8=" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-dark">Excelente administracion</h5>
+        <p class="card-text text-dark">Organizacion del personal, ambilidad con el cliente, y un excelente servicio</p>
+      </div>
+
+    </div>
+    <div class="card bg-transparent border-dark">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/db/ca/1a/restaurante-peccati.jpg?w=600&h=-1&s=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-dark">Estilo rooftop</h5>
+        <p class="card-text text-dark">Espacios amplios, buenas vistas y comodos</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

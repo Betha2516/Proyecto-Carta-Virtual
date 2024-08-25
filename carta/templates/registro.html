@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+Registrarse
+{% endblock%}
+
+{%block content%}
+<div class="container" >
+<div class="login-container">
+    <h2 class="text-center mt-4">Iniciar Sesión</h2>
+    <form method="POST" action="#">
+        <div class="mb-3">
+            <label for="username" class="form-label">Nombre de usuario</label>
+            <input type="text" class="form-control" id="username" placeholder="Ingrese su nombre de usuario" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Recordarme</label>
+        </div>
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">Iniciar Sesión</button>
+        </div>
+        <div class="mt-3 text-center">
+            <p class="form-text">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+            </p>
+            <p class="form-text">
+                <a href="#">¿No tienes una cuenta? Regístrate</a>
+            </p>
+        </div>
+    </form>
+</div>
+</div>
+{%endblock%}
+{%block scripts%}
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+{%endblock%}
